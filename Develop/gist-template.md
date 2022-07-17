@@ -47,13 +47,11 @@ In this expression there are four brackets:
 `([\/\w \.-]*)`
 
 ### Bracket Expressions
-Much like the groups in this example, there are also 3 bracket expressions. The information in the bracket expressions is opened and closed between brackets like this []. This indentifies which information is allowed to be matched.
+Anything inside the set of square brackets [] represents a range of characters that needs to be matched. These Bracket Expressions are also known as Positive Character Groups because they outline the character we want to include.
 
-Bracket Expression #1: [a-z0-9_\.-] - includes case sensitive characters from a-z, numbers from 0-9 an underscore, periods and hyphens.
-
-Bracket Expression #2: [\da-z\.-] - includes all digits, case sensitive characters from a-z, periods and hyphens
-
-Bracket Expression #3: [a-z\.] - includes case sensitive characters from a-z and periods.
+This regex includes multiple Bracket Expressions, an example of one would be `[\da-z\.-]`
+in the second grouping or `[a-z\.]` in the third grouping. The `[a-z\.]` expression
+is saying to included anything from a-z and add a `.` add the end. 
 
 ### Character Classes
 Character classes are used to define character in regex which can occur in an input string to fulfil a match. Bracket expressions are a character class frequently used to define positive or negative character groups.
@@ -86,3 +84,4 @@ In our regex example, the `\/\/` in the first grouping is add `//` in front of h
 ## Author
 Made with love by Theo Phillips, the next Elon Musk.
 GitHub: https://github.com/CannibalClarence
+
